@@ -107,6 +107,7 @@ export default {
         }
     },
     methods: {
+
         async register(values){
             this.reg_show_alert =true;
             this.reg_in_submision=true;
