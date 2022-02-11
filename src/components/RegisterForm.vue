@@ -2,7 +2,7 @@
         <!-- Registration Form -->
           <div class="text-white text-center font-bold p-5 mb-4"
           v-if="reg_show_alert" :class="reg_alert_variant">
-            {{red_alert_msg}}
+            {{reg_alert_msg}}
           </div>
           <vee-form :validation-schema="schema"
           @submit="register" :initial-values="userData">
@@ -82,6 +82,7 @@
 </template>
 
 <script>
+
 export default {
     name: 'RegisterForm',
     data(){
@@ -101,24 +102,30 @@ export default {
             reg_in_submision: false,
             reg_show_alert:false,
             reg_alert_variant: 'bg-blue-500',
-            red_alert_msg: 'Please wait!',
+            reg_alert_msg: 'Please wait!',
 
-        // loginSchema: {
-        //     email: 'required|email',
-        //     password: 'required|min:3|max:32',
-        //     }
         }
     },
     methods: {
-        register(values){
+        async register(values){
             this.reg_show_alert =true;
             this.reg_in_submision=true;
             this.reg_alert_variant='bg-blue-500'
-            this.red_alert_msg="Please Wait!"
+            this.reg_alert_msg="Please Wait!"
 
-            this.reg_alert_variant = 'bg-green-500'
-            this.red_alert_msg = 'Account created!'
-            console.log(values)
+            try{
+              this.$store.dispatch('register', values);
+            } catch(error) {
+                this.reg_in_submision = false;
+                this.reg_alert_variant = 'bg-red-500';
+                this.reg_alert_msg = 'Try again later';
+                return;
+              }
+
+              this.reg_alert_variant = 'bg-green-500'
+              this.reg_alert_msg = 'Account created!'
+              window.location.reload();
+
         },
     }
 }
