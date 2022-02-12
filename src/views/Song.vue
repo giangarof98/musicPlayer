@@ -57,10 +57,9 @@
     v-for="comment in sortedComments" :key="comment.docID">
       <!-- Comment Author -->
       <div class="mb-5">
-        <div class="font-bold">{{comment.name}}</div>
+        <div class="font-bold">{{ comment.name }}</div>
         <time>{{comment.datePosted}}</time>
       </div>
-
       <p>
         {{comment.content}}
       </p>

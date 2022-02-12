@@ -54,7 +54,7 @@ export default createStore({
                 country: payload.country
             });
 
-            userCred.user.updateProfile({
+            await userCred.user.updateProfile({
                 displayName: payload.name,
 
             });
