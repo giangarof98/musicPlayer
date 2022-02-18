@@ -81,7 +81,7 @@
           </vee-form>
 </template>
 
-<script>
+<script type="module">
 
 export default {
     name: 'RegisterForm',

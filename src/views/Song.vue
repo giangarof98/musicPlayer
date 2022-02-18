@@ -70,7 +70,7 @@
 
 </template>
 
-<script>
+<script type="module">
 import {songsCollection, auth, commentsCollection} from '@/includes/firebase'
 import {mapState, mapActions} from 'vuex'
 

@@ -40,7 +40,7 @@
     </div>
 </template>
 
-<script>
+<script type="module">
 import {storage, auth, songsCollection} from '@/includes/firebase'
 export default {
     name:'Upload',

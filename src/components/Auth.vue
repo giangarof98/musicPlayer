@@ -75,7 +75,7 @@ export default{
   }
 }
 
-</script>
+</script type="module">
 
 <style>
 

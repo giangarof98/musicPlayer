@@ -43,7 +43,7 @@
     
 </template>
 
-<script>
+<script type="module">
 import{mapActions, mapGetters, mapState} from 'vuex'
 
 export default {

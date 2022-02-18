@@ -28,7 +28,7 @@
   
 </template>
 
-<script>
+<script type="module">
 import AppUpload from '@/components/Upload.vue';
 import CompositionItem from '@/components/CompositionItem.vue'
 import {auth, songsCollection} from '@/includes/firebase'
