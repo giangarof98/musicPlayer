@@ -50,7 +50,7 @@
   </div>
 </template>
 
-<script>
+<script type="module">
 
 import {mapMutations, mapState} from 'vuex'
 import AppLoginForm from './LoginForm.vue'
@@ -75,8 +75,6 @@ export default{
   }
 }
 
-</script type="module">
+</script>
 
-<style>
 
-</style>
