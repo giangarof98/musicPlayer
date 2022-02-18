@@ -1,4 +1,5 @@
 <template>
+<div>
         <!-- Registration Form -->
           <div class="text-white text-center font-bold p-5 mb-4"
           v-if="reg_show_alert" :class="reg_alert_variant">
@@ -79,6 +80,7 @@
               Submit
             </button>
           </vee-form>
+</div>
 </template>
 
 <script>
@@ -115,7 +117,7 @@ export default {
             this.reg_alert_msg="Please Wait!"
 
             try{
-              this.$store.dispatch('register', values);
+              await this.$store.dispatch('register', values);
             } catch(error) {
                 this.reg_in_submision = false;
                 this.reg_alert_variant = 'bg-red-500';
