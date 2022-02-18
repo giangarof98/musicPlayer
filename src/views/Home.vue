@@ -39,7 +39,7 @@
 </main>
 </template>
 
-<script type="module">
+<script>
 import {songsCollection} from '@/includes/firebase'
 import AppSongItem from '@/components/SongItem.vue'
 

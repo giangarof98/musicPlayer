@@ -21,7 +21,7 @@ duration-300 hover:bg-gray-50">
     
 </template>
 
-<script type="module">
+<script>
 export default {
     name:'SongItem',
     props: ['song']

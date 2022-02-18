@@ -31,7 +31,7 @@
         </vee-form>
 </template>
 
-<script type="module">
+<script>
 export default {
     name: 'LoginForm',
     data(){

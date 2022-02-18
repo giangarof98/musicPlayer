@@ -141,7 +141,7 @@
  </template>
 
 
-<script type="module">
+<script>
 
 import AppHeader from './components/Header.vue'
 import AppAuth from './components/Auth.vue'

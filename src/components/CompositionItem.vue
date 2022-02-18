@@ -51,7 +51,7 @@
     
 </template>
 
-<script type="module">
+<script>
 import {songsCollection, storage} from '@/includes/firebase'
 export default {
     name:'CompositionItem',
